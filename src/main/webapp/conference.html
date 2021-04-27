@@ -428,14 +428,11 @@ body {
 		audio : true
 	};
 
-	var appName = location.pathname.substring(0, location.pathname
-			.lastIndexOf("/") + 1);
-	var path = location.hostname + ":" + location.port + appName + "websocket";
-	var websocketURL = "ws://" + path;
-
-	if (location.protocol.startsWith("https")) {
-		websocketURL = "wss://" + path;
-	}
+	var websocketURL = "wss://onvideo.apprikart.com:5443/WebRTCAppEE/websocket";
+	
+		if (location.protocol.startsWith("https")) {
+			websocketURL = "wss://onvideo.apprikart.com:5443/WebRTCAppEE/websocket";
+		}
 
 	var webRTCAdaptor = new WebRTCAdaptor(	
 			{
